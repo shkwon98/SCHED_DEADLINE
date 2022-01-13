@@ -23,33 +23,33 @@ void *rt_thread(void *data) {
 	attr.sched_period = attr.sched_deadline = period_ms * 1000 * 1000;
 
 	/* set sched deadline */
-  if(sched_setattr(gettid(), &attr, 0)) {
-	  perror("sched_setattr");
-	  exit(1);
+  	if(sched_setattr(gettid(), &attr, 0)) {
+		perror("sched_setattr");
+	  	exit(1);
 	}
 
 	/* loop starts */
 	while (1) {
-    /* WRITE YOUR CODE BELOW */
+ 	/* WRITE YOUR CODE BELOW */
        
 		sched_yield();
 	}
 
-    return NULL;
+    	return NULL;
 }
 
 
 int main(int argc, char* argv[]) {
 
-  pthread_t thread;
+  	pthread_t thread;
 
-  /* Create a pthread with specified attributes */
-  pthread_create(&thread, NULL, rt_thread, NULL);
-  sleep(10);
+  	/* Create a pthread with specified attributes */
+  	pthread_create(&thread, NULL, rt_thread, NULL);
+  	sleep(10);
 
-  /* Join the thread and wait until it is done */
-  pthread_join(thread, NULL);
+  	/* Join the thread and wait until it is done */
+  	pthread_join(thread, NULL);
   
-  printf("main dies");
-  return 0;
+  	printf("main dies");
+  	return 0;
 }
