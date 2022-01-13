@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-#include "ddd.h"
+#include "sched_deadline.h"
 
 
 void *rt_thread(void *data) {
