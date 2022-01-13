@@ -1,3 +1,5 @@
+// Compiler flags: gcc -O0 name.c -o name -Wall -lm -lpthread
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
