@@ -31,8 +31,10 @@ void *rt_thread(void *data) {
 
 	/* loop starts */
 	while (1) {
+        	/* WRITE YOUR CODE BELOW */
+		
+		
         	sched_yield();
-        	//sched_wait_interval();
 	}
 
 	printf("deadline rt_thread dies [%ld]\n", gettid());
