@@ -7,7 +7,7 @@
 #include "sched_deadline.h"
 
 void *rt_thread(void *data) {
-  /* scheduler attributes */
+ 	/* scheduler attributes */
 	struct sched_attr attr;
 	float period_ms = 1;
 
