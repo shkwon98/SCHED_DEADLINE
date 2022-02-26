@@ -1,2 +1,2 @@
 # SCHED_DEADLINE
-C code exmample of 'SCHED_DEADLINE' schedulling policy of linux
+C code reference to run program with SCHED_DEADLINE linux schedulling policy.
